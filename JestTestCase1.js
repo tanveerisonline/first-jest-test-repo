@@ -1,0 +1,13 @@
+function reverseString(str){
+  let reversed = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversed += str[i];
+  }
+  if (reversed !== str.split('').reverse().join('')) {
+    throw new Error('The string is not reversed');
+  } else {
+    return reversed;
+  }
+}
+
+module.exports = reverseString;
